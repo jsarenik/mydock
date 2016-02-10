@@ -1,1 +1,2 @@
-docker build -t jasan_pokus .
+. $PWD/conf.inc
+docker build -t $IMG_NAME .

@@ -1,2 +1,4 @@
-docker run -d -P --name pokus_running jasan_pokus
-docker port pokus_running 22
+. $PWD/conf.inc
+docker run -d -P --name $DOK_NAME $IMG_NAME
+# or docker run $DOK_NAME
+docker port $DOK_NAME 22

@@ -8,7 +8,7 @@ FROM phusion/baseimage:0.9.18
 # Use baseimage-docker's init system.
 CMD ["/sbin/my_init"]
 
-RUN apt-get update && apt-get install -y openssh-server
+#RUN apt-get update && apt-get install -y openssh-server
 RUN rm -f /etc/service/sshd/down
 
 # Regenerate SSH host keys. baseimage-docker does not contain any, so you
