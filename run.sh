@@ -1,2 +1,4 @@
+#!/bin/sh
+
 . $PWD/conf.inc
-docker build -t $IMG_NAME .
+docker run -d -P --name $DOK_NAME $IMG_NAME

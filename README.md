@@ -9,3 +9,15 @@ Notes
 -----
 
 docker ps -a
+
+
+Usage
+-----
+
+./init.sh
+./run.sh
+./start.sh
+./exec.sh
+./ssh.sh
+./stop.sh
+./cleanup.sh
