@@ -8,9 +8,10 @@ FROM phusion/baseimage:0.9.18
 # Use baseimage-docker's init system.
 CMD ["/sbin/my_init"]
 
-#RUN apt-get update && apt-get install -y openssh-server
+RUN apt-get update && apt-get install -y openssh-server tmux
 RUN rm -f /etc/service/sshd/down
-RUN useradd -mk /etc/skel ahoj
+RUN groupadd -r admin
+RUN useradd -G admin -mk /etc/skel ahoj
 RUN echo 'ahoj:ahoj' | chpasswd
 
 # Regenerate SSH host keys. baseimage-docker does not contain any, so you
