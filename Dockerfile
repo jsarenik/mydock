@@ -10,7 +10,8 @@ CMD ["/sbin/my_init"]
 
 #RUN apt-get update && apt-get install -y openssh-server
 RUN rm -f /etc/service/sshd/down
-RUN useradd -mk /etc/skel -p '$6$LhGLK/Hm$5S4Cj0kWRM2jBhlKsh.BMQQq89UvSfEF8n9fN8ztZQeB6DyM.2.Ml5sRwQeu7M53kLeu3bux7O1zCRt0iyc2g1' ahoj
+RUN useradd -mk /etc/skel ahoj
+RUN echo 'ahoj:ahoj' | chpasswd
 
 # Regenerate SSH host keys. baseimage-docker does not contain any, so you
 # have to do that yourself. You may also comment out this instruction; the

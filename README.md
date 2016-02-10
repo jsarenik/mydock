@@ -8,12 +8,13 @@ See also http://phusion.github.io/baseimage-docker/
 Notes
 -----
 
-docker ps -a
+    docker ps -a
 
 
 Usage
 -----
 
+```
 ./init.sh
 ./run.sh
 ./exec.sh
@@ -22,3 +23,4 @@ Usage
 ./ssh.sh
 ./stop.sh
 ./cleanup.sh
+```
