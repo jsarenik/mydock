@@ -16,8 +16,9 @@ Usage
 
 ./init.sh
 ./run.sh
-./start.sh
 ./exec.sh
+./stop.sh
+./start.sh
 ./ssh.sh
 ./stop.sh
 ./cleanup.sh
