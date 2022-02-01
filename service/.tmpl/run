@@ -1,0 +1,5 @@
+#!/bin/sh
+
+exec </dev/null
+exec 2>&1
+exec /moje/busybox ntpd -N -p 192.168.1.253 -n

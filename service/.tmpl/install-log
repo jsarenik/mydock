@@ -1,0 +1,6 @@
+#!/bin/sh
+for i in $*;
+do
+  test -d $i/log || mkdir $i/log;
+  ln -vnsf ../../.tmpl/log/run $i/log/run;
+done

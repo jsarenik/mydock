@@ -1,0 +1,8 @@
+#!/bin/sh
+
+a="/$0"; a=${a%/*}; a=${a:-.}; a=${a#/}/; SRVDIR=$(cd "$a/.." || exit; pwd)
+a="/$0"; a=${a%/*}; a=${a:-.}; a=${a#/}/; TOPDIR=$(cd "$a/../.." || exit; pwd)
+NAME=${SRVDIR#$TOPDIR/}
+LDIR=/tmp/nsm/log/$NAME
+mkdir -p $LDIR 2>/dev/null
+exec svlogd -t $LDIR

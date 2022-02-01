@@ -1,0 +1,6 @@
+#!/bin/sh
+
+exec </dev/null
+exec 2>&1
+test -d /run/sshd || mkdir /run/sshd || true
+exec /usr/sbin/sshd -De

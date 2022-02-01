@@ -1,0 +1,7 @@
+#!/bin/sh
+
+mkdir /tmp/running
+
+SD=/service
+exec env - PATH=$PATH HOME=$HOME \
+  runsvdir -P $SD 'log: ....................................................................................' &
